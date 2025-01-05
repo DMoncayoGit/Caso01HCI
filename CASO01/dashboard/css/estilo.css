@@ -1,0 +1,104 @@
+.container {
+  display: flex; /* Usamos Flexbox para crear las dos columnas */
+  gap: 20px; /* Espacio entre las dos columnas */
+}
+
+.columna-contenido {
+  flex: 1; /* La columna con la información ocupa el 50% del espacio disponible */
+  padding: 5px;
+  margin-top: 25px; /* Margen superior de 25px */
+  margin-bottom: 25px; /* Margen inferior de 50px */
+}
+
+.columna-grafica {
+  flex: 1; /* La columna vacía ocupa el 50% */
+  padding: 5px;
+  margin-top: 25px; /* Margen superior de 25px */
+  margin-bottom: 25px; /* Margen inferior de 50px */
+}
+
+/* Consultas de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Cambia la dirección del Flexbox para apilar las columnas */
+  }
+
+  .columna-contenido {
+    margin-top: 25px; /* Margen superior para la columna de contenido */
+    margin-bottom: 25px; /* Margen inferior reducido para mejorar el diseño en pantallas pequeñas */
+  }
+
+  .columna-grafica {
+    margin-bottom: 25px; /* Margen inferior para la columna vacía */
+  }
+}
+
+
+@media (max-width: 768px) {
+  #contacto {
+      width: 100%;
+      font-size: 14px;
+      border-collapse: collapse;
+  }
+
+  #contacto thead {
+    display: table-header-group; 
+  }
+
+  #contacto td {
+      padding: 8px 10px; 
+      text-align: left;  
+  }
+
+  /* Hacer que el cuerpo de la tabla se despliegue correctamente */
+  #contacto tbody {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+  }
+
+  #contacto tr {
+      display: table-row; /* Cada fila sigue siendo una fila de tabla */
+      border-bottom: 1px solid #ddd;
+  }
+
+  /* Asegurar que las celdas se comporten como celdas de tabla */
+  #contacto td {
+      display: table-cell;
+      text-align: left;
+      padding: 8px;
+      word-wrap: break-word;
+  }
+
+  /* Cambiar la forma en que se muestran las celdas en dispositivos móviles */
+  #contacto td:before {
+      content: attr(data-label); /* Mostramos la etiqueta con el nombre de la columna */
+      font-weight: bold;
+      color: #555;
+      display: block;
+      margin-bottom: 5px; /* Espacio entre la etiqueta y el dato */
+  }
+
+  /* Asegurar que el primer hijo tenga un padding adecuado */
+  #contacto td:first-child {
+      padding-left: 10px;
+  }
+}
+
+
+/* Consultas de medios para pantallas pequeñas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Cambia la dirección del Flexbox para apilar las columnas */
+  }
+
+  .columna-contenido {
+    margin-top: 25px; /* Margen superior para la columna de contenido */
+    margin-bottom: 25px; /* Margen inferior reducido para mejorar el diseño en pantallas pequeñas */
+  }
+
+  .columna-grafica {
+    margin-bottom: 25px; /* Margen inferior para la columna vacía */
+  }
+}
+
